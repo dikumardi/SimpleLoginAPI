@@ -1,5 +1,5 @@
 # SimpleLoginAPI
-# Express JWT Authentication API
+## Express JWT Authentication API
 
 This project is a simple user authentication system built with **Node.js**, **Express**, and **MongoDB**.
 It demonstrates how to implement authentication using **JSON Web Tokens (JWT)** with cookies.
@@ -15,7 +15,7 @@ The API allows users to register, log in, access a protected route, and log out.
 * JWT based authentication
 * Token stored in cookies
 * Protected route for authenticated users
-* Logout functionality
+* Logout functionality with **token blacklist**
 
 ---
 
@@ -27,6 +27,7 @@ The API allows users to register, log in, access a protected route, and log out.
 * Mongoose
 * JSON Web Token (JWT)
 * cookie-parser
+* bcrypt
 
 ---
 
