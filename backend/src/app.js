@@ -1,6 +1,7 @@
 const  express  = require("express");
 const authRoutes = require('./routes/auth.routes');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 
 
@@ -11,7 +12,10 @@ app.use(cookieParser())
 
 /* POST /api/auth   */
 app.use('/api/auth', authRoutes)
-
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}));
 
 
 module.exports = app;
