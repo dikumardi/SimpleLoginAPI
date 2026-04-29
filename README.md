@@ -1,66 +1,114 @@
-# Full Stack Auth System (MERN)
+# 🔐 Full Stack Authentication System (MERN)
 
-This is a simple full stack authentication system using MERN stack. It has register, login, logout and get current user using JWT and cookies.
+A scalable and production-ready authentication system built using the MERN stack (MongoDB, Express, React, Node.js).
 
----
-
-## Features
-
-- Register user
-- Login user
-- Logout user
-- Get current user
-- Password hashing using bcrypt
-- JWT authentication
-- Cookies for storing token
+This project demonstrates secure user authentication using JWT (JSON Web Tokens), HTTP-only cookies, and bcrypt password hashing.
 
 ---
 
-## Tech Stack
+## 🚀 Features
 
-Frontend:
-- React
-- Axios
-- React Router
-
-Backend:
-- Node.js
-- Express
-- MongoDB (Mongoose)
-- bcrypt
-- jsonwebtoken
-- cookie-parser
+* User Registration (Signup)
+* User Login (Signin)
+* User Logout
+* Get Current Logged-in User
+* Secure password hashing using bcrypt
+* JWT-based authentication
+* HTTP-only cookie-based token storage
+* Protected routes using middleware
+* Clean and modular project structure
 
 ---
 
-## Environment Variables
+## 🛠️ Tech Stack
 
-Create a .env file in server folder:
+### Frontend
+* React.js
+* Axios
+* React Router DOM
+* Context API
 
-PORT=3000  
-MONGO_URI=your_mongo_uri  
-JWT_SECRET=your_secret  
-
----
-
-
-## Run Project
-
-Backend:
-
-cd backend  
-npm install
-npx nodemon server.js  
-
-
-Frontend:
-
-cd frontend  
-npm install  
-npm run dev  
+### Backend
+* Node.js
+* Express.js
+* MongoDB (Mongoose)
+* bcrypt
+* jsonwebtoken
+* cookie-parser
+* dotenv
 
 ---
 
-## Author
+## 📁 Project Structure
 
-  https://github.com/dikumardi/
+```
+root/
+├── backend/
+│ ├── src/
+│ │ ├── controllers/ # Business logic
+│ │ ├── db/ # Database connection
+│ │ ├── middleware/ # Auth middleware
+│ │ ├── models/ # Mongoose schemas
+│ │ ├── routes/ # API routes
+│ │ └── app.js # Express app setup
+│ │
+│ ├── server.js # Entry point (starts server)
+│ ├── package.json
+│ └── .env
+│
+├── frontend/
+│ ├── src/
+│ │ ├── features/
+│ │ │ └── auth/
+│ │ │ ├── hooks/
+│ │ │ ├── pages/
+│ │ │ ├── services/
+│ │ │ └── AuthContext.jsx
+│ │ │
+│ │ ├── App.jsx
+│ │ ├── AppRoutes.jsx
+│ │ ├── main.jsx
+│ │ └── index.css
+│ │
+│ ├── public/
+│ └── package.json
+│
+├── README.md
+└── .gitignore
+```
+
+---
+
+## ⚙️ Environment Variables
+
+```
+PORT=3000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+NODE_ENV=development
+```
+
+---
+
+## ▶️ Getting Started
+
+```
+git clone https://github.com/dikumardi/your-repo-name.git
+cd your-repo-name
+cd backend && npm install
+cd ../frontend && npm install
+```
+
+---
+
+## 🔗 API Endpoints
+
+POST   /api/auth/register  
+POST   /api/auth/login  
+POST   /api/auth/logout  
+GET    /api/auth/me  
+
+---
+
+## 👨‍💻 Author
+https://github.com/dikumardi
